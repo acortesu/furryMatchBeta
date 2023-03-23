@@ -1,11 +1,14 @@
 .footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
-  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footerText {
-  color: var(--clr-pink);
+  color: var(--clr-orange);
   font: var(--typo-global);
 }

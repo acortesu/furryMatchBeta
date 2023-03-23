@@ -3,8 +3,8 @@
 
   <div class="profile-pic">
     <div class="profile-pic-div">
-      <img src="../../../assets/img/upload-pic.png" id="photo" />
-      <input type="file" id="file" />
+      <img src="../../../assets/img/upload-pic.png" id="photo"/>
+      <input type="file" id="file"/>
       <label for="file" id="uploadBtn">Subí una foto</label>
     </div>
   </div>
@@ -13,62 +13,131 @@
     <div class="wrapper-sec">
       <form [formGroup]="form" (ngSubmit)="registrarUsuario()">
         <div class="cnt-inputs">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Nombre"
-            name="nombre"
-            #userInput
-            form="nombre"
-            formControlName="nombre"
-          />
+          <div class="cnt-pass">
+            <input
+              type="text"
+              class="form-control inp-txt"
+              placeholder="Correo electrónico"
+              name="email"
+              #userInput
+              form="email"
+              formControlName="email"
+            />
 
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Apellido"
-            name="apellido1"
-            formControlName="apellido1"
-          />
+            <input
+              type="text"
+              class="form-control inp-txt"
+              placeholder="Contraseña"
+              name="passwordHash"
+              #userInput
+              form="passwordHash"
+              formControlName="passwordHash"
+            />
+
+            <input
+              type="text"
+              class="form-control inp-txt"
+              placeholder="Confirmar contraseña"
+              name="passwordCheck"
+              #userInput
+              form="passwordCheck"
+              formControlName="passwordCheck"
+            />
+
+          </div>
+          <div class="cnt-row1">
+            <input
+              type="text"
+              class="form-control inp-txt"
+              placeholder="Nombre"
+              name="firstName"
+              #userInput
+              form="firstName"
+              formControlName="firstName"
+            />
+
+            <input
+              type="text"
+              class="form-control inp-txt"
+              placeholder="Segundo nombre"
+              name="secondName"
+              form="secondName"
+              formControlName="secondName"
+            />
+            <input
+              type="text"
+              class="form-control inp-txt"
+              placeholder="Apellido"
+              name="firstLastName"
+              form="firstLastName"
+              formControlName="firstLastName"
+            />
+            <input
+              type="text"
+              class="form-control inp-txt"
+              placeholder="Segundo apellido"
+              name="secondLastName"
+              form="secondLastName"
+              formControlName="secondLastName"
+            />
+          </div>
+          <div class="cnt-row2">
+              <input
+                type="text"
+                class="form-control inp-txt"
+                placeholder="Número de identificación"
+                name="idNumber"
+                formControlName="idNumber"
+              />
+              <input
+                type="text"
+                class="form-control inp-txt"
+                placeholder="Teléfono"
+                name="phoneNumber"
+                formControlName="phoneNumber"
+              />
+              <input
+                type="text"
+                class="form-control inp-txt"
+                placeholder="Género"
+                name="gender"
+                formControlName="gender"
+              />
+
+              <input
+                type="text"
+                class="form-control inp-txt"
+                placeholder="Dirección"
+                name="direccion"
+                formControlName="direccion"
+              />
+          </div>
+          <div class="cnt-row3">
+              <input
+                type="text"
+                class="form-control inp-txt"
+                placeholder="Provincia"
+                name="provincia"
+                formControlName="privincia"
+              />
+              <input
+                type="text"
+                class="form-control inp-txt"
+                placeholder="Distrito"
+                name="distrito"
+                formControlName="distrito"
+              />
+              <input
+                type="text"
+                class="form-control inp-txt"
+                placeholder="Cantón"
+                name="canton"
+                formControlName="canton"
+              />
+          </div>
         </div>
 
-        <div class="cnt-inputs">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Teléfono"
-            name="telefono"
-            formControlName="telefono"
-          />
-
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Dirección"
-            name="direccion"
-            formControlName="direccion"
-          />
-        </div>
-
-        <div class="cnt-inputs">
-          <input
-            type="email"
-            class="form-control"
-            placeholder="Correo electrónico"
-            name="correo"
-            formControlName="correo"
-          />
-
-          <input
-            type="password"
-            class="form-control"
-            placeholder="Password"
-            name="password"
-            formControlName="password"
-          />
-        </div>
-
-        <button class="btn-pnk btn" [disabled]="form.invalid" type="submit">
+        <button class="btn-blue btn" [disabled]="form.invalid" type="submit">
           Confirmar
         </button>
         <div class="cnt-ingresa">

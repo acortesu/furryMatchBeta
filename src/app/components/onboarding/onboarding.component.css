@@ -1,51 +1,88 @@
-.cnt-imgs {
-  margin-top: var(--margin-big);
+.cnt-parent {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.cnt-princ, .cnt-sec {
   text-align: center;
-  gap: 25px;
+}
+
+.img-logo-index {
+  margin-top: var(--margin-md);
+  max-width: 60%;
+  max-height: 125px;
+  /*object-fit: cover;*/
+}
+
+.cnt-imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--margin-small);
+  justify-items: center;
+}
+
+.cnt-imgs {
+  margin-top: var(--margin-md);
+  margin-bottom: var(--margin-md);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--margin-small);
+}
+
+.img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .img-small-index {
-  width: 140px;
-  height: 222.35px;
+  width: 120px;
+  height: 200px;
   border-radius: 15px;
   object-fit: cover;
 }
 
 .img-med-index {
-  width: 200px;
-  height: 300px;
+  width: 140px;
+  height: 240px;
   border-radius: 15px;
   object-fit: cover;
 }
 
 .img-big-index {
-  width: 235px;
-  height: 360px;
+  width: 175px;
+  height: 300px;
   border-radius: 15px;
   object-fit: cover;
 }
 
 .title {
-  font: var(--typo-header);
-  color: var(--clr-pink);
-  margin-top: var(--margin-big);
+  margin-top: var(--margin-min);
+  font: var(--typo-title);
+  color: var(--clr-blue);
+  /*font-size: var(--typo-header);*/
+}
+
+.text-cuenta, .text-link{
+  font: var(--typo-global);
+}
+
+.text-link{
+  margin-top: var(--margin-min);
+  font-weight: bold;
+  color: var(--clr-orange);
+
 }
 
 .text {
   font: var(--typo-global);
-  margin-top: var(--margin-min);
-}
-
-.cnt-princ {
-  text-align: center;
-}
-
-.text-link {
-  color: var(--clr-pink);
-  font: var(--typo-global-bold);
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 .cnt-ingresa {
@@ -56,15 +93,25 @@
   gap: var(--margin-min);
 }
 
-.btn-pnk {
+.last-element {
+  margin-bottom: 65px; /* 50px de altura del footer + 15px de margen */
+}
+
+.btn-blue {
   margin-top: var(--margin-md);
   padding: 8px 25px;
-  background-color: var(--clr-pink);
+  background-color: var(--clr-blue);
   font: var(--typo-button);
   color: var(--clr-white);
   transition: background-color ease-in 300ms;
 }
 
-.btn-pnk:hover {
-  background-color: var(--clr-black);
+.btn-blue:hover {
+  background-color: var(--clr-orange);
+}
+
+@media only screen and (max-device-width: 668px) {
+  .img-small-index, .img-med-index {
+    display: none;
+  }
 }

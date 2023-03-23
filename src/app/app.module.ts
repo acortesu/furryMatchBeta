@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { OnBoardingComponent } from './components/onboarding/onboarding.componen
 import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 import { RegistroMascotaComponent } from './components/registro-mascota/registro-mascota.component';
 import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuar
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

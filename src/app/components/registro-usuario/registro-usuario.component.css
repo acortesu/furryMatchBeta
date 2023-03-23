@@ -1,6 +1,6 @@
 .title {
   font: var(--typo-header);
-  color: var(--clr-black);
+  color: var(--clr-orange);
   margin-top: var(--margin-big);
 }
 
@@ -22,27 +22,44 @@
 
 .cnt-inputs {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
   gap: var(--margin-small);
   margin-bottom: var(--margin-small);
 }
+
+.cnt-pass{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: var(--margin-md);
+  margin-bottom: var(--margin-md);
+}
+
+.cnt-row1, .cnt-row2, .cnt-row3{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: var(--margin-small);
+  margin-bottom: var(--margin-small);
+}
+
 
 .form-control {
   font: var(--typo-global);
   border-color: var(--clr-grey);
 }
 
-.btn-pnk {
-  margin-top: var(--margin-md);
+.btn-blue {
+  margin-top: var(--margin-md-small);
   padding: 8px 25px;
-  background-color: var(--clr-pink);
+  background-color: var(--clr-blue);
   font: var(--typo-button);
   color: var(--clr-white);
   transition: background-color ease-in 300ms;
 }
 
-.btn-pnk:hover {
-  background-color: var(--clr-black);
+.btn-blue:hover {
+  background-color: var(--clr-orange);
 }
 
 .profile-pic {
@@ -66,11 +83,12 @@
 }
 
 input.ng-touched.ng-invalid {
-  border-color: var(--clr-pink);
+  border-color: var(--clr-orange);
 }
 
 .cnt-ingresa {
   margin-top: var(--margin-min);
+  margin-bottom: var(--margin-md);
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -78,6 +96,11 @@ input.ng-touched.ng-invalid {
 }
 
 .text-link {
-  color: var(--clr-pink);
+  color: var(--clr-orange);
   font: var(--typo-global-bold);
+}
+
+.text-cuenta {
+
+  font: var(--typo-global);
 }

@@ -1,10 +1,10 @@
 <div class="cnt-princ">
-  <h1 class="title">Mi perfil</h1>
+  <h1 class="title">Mi mascota</h1>
 
   <div class="profile-pic">
     <div class="profile-pic-div">
-      <img src="../../../assets/img/upload-pic.png" id="photo" />
-      <input type="file" id="file" />
+      <img src="../../../assets/img/upload-pic.png" id="photo"/>
+      <input type="file" id="file"/>
       <label for="file" id="uploadBtn">Subí una foto</label>
     </div>
   </div>
@@ -13,52 +13,101 @@
     <div class="wrapper-sec">
       <form [formGroup]="form" (ngSubmit)="registrarMascota()">
         <div class="cnt-inputs">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Nombre"
-            name="nombre"
-            form="nombre"
-            formControlName="nombre"
-          />
+          <div class="cnt-row1">
+            <input
+              type="text"
+              class="form-control inp-txt"
+              placeholder="Nombre de tu mascota"
+              name="name"
+              form="name"
+              formControlName="name"
+            />
+            <input
+              type="text"
+              class="form-control inp-desc inp-txt"
+              placeholder="Descripción"
+              name="description"
+              form="description"
+              formControlName="description"
+            />
+          </div>
+          <div class="cnt-row2">
+            <select formControlName="tipo" class="dropdown">
+              <option value="" disabled selected>Elegir tipo</option>
+              <option *ngFor="let listTipo of listTipo" [value]="listTipo.Value">
+                {{ listTipo.Value }}
+              </option>
+            </select>
 
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Descripción"
-            name="descripcion"
-            form="descripcion"
-            formControlName="descripcion"
-          />
+            <select formControlName="raza" class="dropdown">
+              <option value="" disabled selected>Elegir raza</option>
+              <option
+                *ngFor="let listRazaPerros of listRazaPerros"
+                [value]="listRazaPerros.Value"
+              >
+                {{ listRazaPerros.Value }}
+              </option>
+            </select>
+
+            <select formControlName="sexo" class="dropdown">
+              <option value="" disabled selected>Elegir sexo</option>
+              <option *ngFor="let listSexo of listSexo" [value]="listSexo.Value">
+                {{ listSexo.Value }}
+              </option>
+            </select>
+
+          </div>
+          <div class="cnt-row3">
+            <div class="cnt-orange">
+              <div class="cnt-orange-row1">
+                <p class="txt-disc">
+                  <mark class="txt-disc-orange">¿Tu objetivo es cruzar a tu mascota?&nbsp;</mark>
+                  Entonces llená estos datos adicionales, son importantes para encontrarle su pareja ideal. Si solo
+                  estás buscando amistad, no es necesario llenarlo. Recordá que podés agregarlos o modificarlos cuando
+                  querás en tu perfil personal.
+                </p>
+
+              </div>
+              <div class="cnt-orange-row2">
+                <div class="cbox-wrapper">
+                  <input type="checkbox">
+                  <label class="cbox-label" for="check">¿Tu mascota cuenta con pedigrí?</label>
+                </div>
+                <div class="cbox-wrapper">
+                  <input type="checkbox">
+                  <label class="cbox-label" for="check">¿Deseas negociar la
+                    repartición de las crias?</label>
+                </div>
+              </div>
+              <div class="cnt-orange-row3">
+                <div class="cbox-wrapper">
+                  <input type="checkbox" id="cobrar-mascotas">
+                  <label class="cbox-label" for="check">¿Deseas cobrar dinero por
+                    el cruce de las mascotas?</label>
+                </div>
+                <input
+                  type="text"
+                  class="form-control inp-txt"
+                  placeholder="Monto a cobrar"
+                  name="desire_amount"
+                  form="desire_amount"
+                  formControlName="desire_amount"
+                />
+              </div>
+            </div>
+
+          </div>
+          <div class="cnt-row4">
+
+
+          </div>
         </div>
 
         <div class="cnt-inputs">
-          <select formControlName="sexo">
-            <option value="" disabled selected>Elegir sexo</option>
-            <option *ngFor="let listSexo of listSexo" [value]="listSexo.Value">
-              {{ listSexo.Value }}
-            </option>
-          </select>
 
-          <select formControlName="tipo">
-            <option value="" disabled selected>Elegir tipo</option>
-            <option *ngFor="let listTipo of listTipo" [value]="listTipo.Value">
-              {{ listTipo.Value }}
-            </option>
-          </select>
-
-          <select formControlName="raza">
-            <option value="" disabled selected>Elegir raza</option>
-            <option
-              *ngFor="let listRazaPerros of listRazaPerros"
-              [value]="listRazaPerros.Value"
-            >
-              {{ listRazaPerros.Value }}
-            </option>
-          </select>
         </div>
 
-        <button class="btn-pnk btn" [disabled]="form.invalid" type="submit">
+        <button class="btn-blue btn" [disabled]="form.invalid" type="submit">
           Confirmar
         </button>
       </form>

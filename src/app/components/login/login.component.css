@@ -1,17 +1,25 @@
 .login-wrapper {
   margin: 3rem auto;
-  width: 20rem;
+}
+
+.card-body{
+  display: flex;
+  justify-content: center;
+}
+
+.img-logo-blue{
+  margin-top: var(--margin-md);
 }
 
 .title {
   font: var(--typo-title);
-  color: var(--clr-pink);
-  margin-top: var(--margin-big);
+  color: var(--clr-orange);
+  margin-top: var(--margin-md);
+  margin-bottom: var(--margin-md-small);
 }
 
-.text {
+.text, .text-cuenta {
   font: var(--typo-global);
-  margin-top: var(--margin-min);
 }
 
 .cnt-princ {
@@ -19,7 +27,7 @@
 }
 
 .text-link {
-  color: var(--clr-pink);
+  color: var(--clr-orange);
   font: var(--typo-global-bold);
 }
 
@@ -30,17 +38,17 @@
   gap: var(--margin-min);
 }
 
-.btn-pnk {
-  margin-top: var(--margin-min);
+.btn-blue {
+  margin-top: var(--margin-md);
   padding: 8px 25px;
-  background-color: var(--clr-pink);
+  background-color: var(--clr-blue);
   font: var(--typo-button);
   color: var(--clr-white);
   transition: background-color ease-in 300ms;
 }
 
-.btn-pnk:hover {
-  background-color: var(--clr-black);
+.btn-blue:hover {
+  background-color: var(--clr-orange);
 }
 
 .form-control {
